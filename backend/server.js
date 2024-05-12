@@ -1,35 +1,23 @@
-require('dotenv').config();
-const apiKey = process.env.API_KEY;
+require('dotenv').config()
+const cors = require('cors')
 
-const axios  = require('axios')
 const express = require('express')
+const app = express();
 
-const app = express()
-const port = 3000
+app.use(cors())
 
-//root
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.use(express.json())
+const port =  process.env.PORT || 3000
+
+// test
+app.get('/test', (req, res) => {
+  res.send("Hi test!")
 })
 
-//api get request
-var muscle = 'biceps';
-app.get('/api/external-data', async (req, res) => {
-  try {
-    const response = await axios.get('https://api.api-ninjas.com/v1/exercises?muscle=' + muscle, 
-    {
-      headers: {
-        'X-Api-Key': apiKey
-        },
-    })
-    const data = response.data
-    res.json(data)
-  } catch (error) {
-    console.error("error making API call")
-    res.status(500).json({ error: 'Internal Server Error'})
-  }
-})
+//apiRoutes
+const apiRoutes = require('../backend/routes/workoutApi')
+app.use(apiRoutes)
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log("server is listening on port", port)
 })
