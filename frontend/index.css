@@ -1,76 +1,76 @@
-
-
-header {
-    background-color: #064789;
-    color: #427AA1;
-    display: flex;
-    flex-direction: row;
-    height: 7vh;
-    gap: 90vw;
-}
-
-.btn-lines {
-    width: 35px;
-    height: 5px;
-    background-color: #427AA1;
-    margin: 6px 0;
-}
-
-img {
-    width: 3vw;
-    height: 5vh;
-    background-color: #064789;
-    margin-top: auto;
-    margin-bottom: auto;
-    
-}
-
-#menu-btn {
-    margin-top: 1vh;
-    margin-left: 1vw;
-    background-color: #064789;
-}
-
 body {
     background-color: #427AA1;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-#dashboard {
-    display: flex;
-    gap: 4vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-top: 2vh;
-    
-}
-
-#programme {
-    background-color: #064789;
     color: #EBF2FA;
-    border: solid 2px #EBF2FA;
-    border-radius: 10px;
-    width: 30vw;
-    height: 20vh;
-    text-align: center;
+    margin: 0;
 }
 
-#workout {
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #064789;
+    width: 100%;
+    box-shadow: 0px 2px 5px #064789;
+}
+
+#header-left {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-right: 20px;
+    gap: 20px;
+    align-items: center;
+}
+
+#header-right {
+    display: flex;
+    margin-right: 20px;
+    margin-top: 5px;
+    gap: 20px;
+    align-items: center;
+    font-size: smaller;
+}
+
+#logo {
+    width: 50px;
+}
+
+#free-trial-btn {
     background-color: #679436;
     color: #EBF2FA;
-    border: solid 2px #EBF2FA;
-    border-radius: 10px;
-    width: 30vw;
-    text-align: center;
-    height: 1000px;
+    border-radius: 500px;
+    border: none;
+    height: 30px;
+    box-shadow: inset 0px 6px 8px -6px #064789;
+    padding: 10px;
+    font-weight: bold;
 }
 
-#progress {
+main {
+    margin-left: 20px;
+}
+
+#main-text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-shadow: 
+        -1px -1px 0 #679436,  
+        1px -1px 0 #679436,
+        -1px 1px 0 #679436,
+        1px 1px 0 #679436;
+}
+
+hr {
+    border: 1;
+    color: #A5BE00;
+    width: 100%;
+
+}
+
+footer {
     background-color: #A5BE00;
-    color: #EBF2FA;
-    border: solid 2px #EBF2FA;
-    border-radius: 10px;
-    width: 30vw;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0px -2px 5px #A5BE00;
     text-align: center;
 }
-
